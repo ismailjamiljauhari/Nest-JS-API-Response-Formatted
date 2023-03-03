@@ -1,5 +1,5 @@
-import { CallHandler, Catch, ExecutionContext, Injectable, NestInterceptor, HttpException } from '@nestjs/common';
-import { Observable, throwError } from 'rxjs';
+import { CallHandler, ExecutionContext, Injectable, NestInterceptor, HttpException } from '@nestjs/common';
+import { Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
 export interface Response<T> {
