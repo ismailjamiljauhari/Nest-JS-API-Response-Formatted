@@ -38,7 +38,7 @@ export class ResponseFormatterInterceptor<T> implements NestInterceptor<T, Respo
             responseFormatter.meta['messages'] = messages;
           } else {
             const customMessages = {};
-            messages.forEach(message => {
+            messages.forEach((message: string) => {
               const index = message.slice(0, message.indexOf(' '))
               const customMessage = message.replace(index + ' ', "");
               if (!customMessages[index]) {
